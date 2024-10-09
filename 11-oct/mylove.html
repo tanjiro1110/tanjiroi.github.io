@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday My Love! ❤️</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #fce4ec;
+            color: #333;
+        }
+
+        .password-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(252, 228, 236, 0.95);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .password-box {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .main-content {
+            display: none;
+            animation: fadeIn 2s;
+        }
+
+        header {
+            background: url('/api/placeholder/1200/400') center/cover;
+            height: 400px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(255,255,255,0.7);
+        }
+
+        .header-content {
+            position: relative;
+            text-align: center;
+            color: #ff4081;
+        }
+
+        .photo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .photo-item {
+            border-radius: 15px;
+            overflow: hidden;
+            transition: transform 0.3s;
+        }
+
+        .photo-item:hover {
+            transform: scale(1.05);
+        }
+
+        .message {
+            padding: 40px;
+            text-align: center;
+            line-height: 1.8;
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: rgba(255,255,255,0.8);
+            margin-top: 40px;
+        }
+
+        .heart {
+            color: #ff4081;
+            animation: heartBeat 1.5s infinite;
+        }
+
+        @keyframes heartBeat {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+            100% { transform: scale(1); }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <div class="password-screen" id="passwordScreen">
+        <div class="password-box animate__animated animate__bounce">
+            <h2>Enter the special date to unlock</h2>
+            <input type="password" id="passwordInput" placeholder="MM/DD/YY">
+            <button onclick="checkPassword()">💝 Unlock</button>
+        </div>
+    </div>
+
+    <div class="main-content" id="mainContent">
+        <header>
+            <div class="header-content">
+                <h1 class="animate__animated animate__fadeInDown">Happy Birthday My Love! ❤️</h1>
+            </div>
+        </header>
+
+        <div class="message animate__animated animate__fadeIn">
+            <h2>To My Dearest,</h2>
+            <p>
+                On this special day, I want to take a moment to express just how much you mean to me. From the very first day we met, you've brought an incredible light into my life that grows brighter with each passing moment. Your smile has the power to illuminate even my darkest days, and your laughter is the sweetest melody I've ever heard.
+
+                As we celebrate another year of your beautiful existence, I find myself falling even deeper in love with everything that makes you uniquely you – your kindness that knows no bounds, your infectious enthusiasm for life, and the way you make everyone around you feel special and loved. Your presence in my life has made me a better person, and I'm grateful for every single moment we've shared.
+
+                Remember all those little adventures we've been on? From our spontaneous road trips to our quiet evenings together, each moment with you feels like a treasure I want to hold onto forever. You've shown me what it means to truly love and be loved in return. Your strength inspires me, your wisdom guides me, and your love completes me in ways I never knew possible.
+
+                As you embark on another year of your life's journey, I want you to know that I'll always be right here beside you, supporting your dreams, sharing your joys, and being your shoulder to lean on during challenging times. You deserve all the happiness this world has to offer, and I promise to do everything in my power to bring a smile to your face every single day.
+
+                May this year bring you everything your heart desires – success in your endeavors, peace in your heart, and countless moments of joy and laughter. You are not just my girlfriend; you are my best friend, my confidante, my partner in crime, and my soulmate. Your birthday is not just a celebration of your life; it's a celebration of all the love and happiness you bring to everyone around you.
+
+                Here's to you, my love – to your past that has shaped you, your present that inspires me, and your future that I'm so excited to share with you. May this birthday be as special as you are to me.
+            </p>
+        </div>
+
+        <div class="photo-grid">
+            <div class="photo-item animate__animated animate__fadeIn">
+                <img src="/api/placeholder/400/300" alt="Our memories 1">
+            </div>
+            <div class="photo-item animate__animated animate__fadeIn">
+                <img src="/api/placeholder/400/300" alt="Our memories 2">
+            </div>
+            <div class="photo-item animate__animated animate__fadeIn">
+                <img src="/api/placeholder/400/300" alt="Our memories 3">
+            </div>
+            <div class="photo-item animate__animated animate__fadeIn">
+                <img src="/api/placeholder/400/300" alt="Our memories 4">
+            </div>
+            <div class="photo-item animate__animated animate__fadeIn">
+                <img src="/api/placeholder/400/300" alt="Our memories 5">
+            </div>
+            <div class="photo-item animate__animated animate__fadeIn">
+                <img src="/api/placeholder/400/300" alt="Our memories 6">
+            </div>
+        </div>
+
+        <footer>
+            <p>Created with <span class="heart">❤️</span> by Your Lovely Boyfriend</p>
+        </footer>
+    </div>
+
+    <script>
+        function checkPassword() {
+            const password = document.getElementById('passwordInput').value;
+            if (password === '11/10/24') {
+                document.getElementById('passwordScreen').style.display = 'none';
+                document.getElementById('mainContent').style.display = 'block';
+            } else {
+                alert('That\'s not the special date! Try again! 💝');
+            }
+        }
+    </script>
+</body>
+</html>
